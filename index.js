@@ -64,7 +64,7 @@ let resultx;
   // await passwordInput.type("saymyname123");
 
   await inputElement.type("8766509670");
-  await passwordInput.type("MZju5LLFS9uKuR6");
+  await passwordInput.type("MZju5LLFS9uKuR6"); 
 
   // Optionally, you can press Enter after typing to submit the form
   await inputElement.press("Enter");
