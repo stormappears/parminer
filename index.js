@@ -60,11 +60,11 @@ let resultx;
   );
 
   // Type your desired text into the input field
-  // await inputElement.type("9209585026");
-  // await passwordInput.type("saymyname123");
+  await inputElement.type("9209585026");
+  await passwordInput.type("saymyname123");
 
-  await inputElement.type("8766509670");
-  await passwordInput.type("MZju5LLFS9uKuR6");
+  // await inputElement.type("8766509670");
+  // await passwordInput.type("MZju5LLFS9uKuR6");
 
   // Optionally, you can press Enter after typing to submit the form
   await inputElement.press("Enter");
@@ -104,7 +104,16 @@ let resultx;
     
    
       setInterval(async () => {
-         if (ammount < 64){
+
+        //balance checker function
+        const innerText = await page.$eval(
+          ".Wallet__C-balance-l1 div",
+          (div) => div.innerText
+        );
+        console.log("Balance:", innerText);
+
+
+        if (ammount < 64){
         const result = await page.evaluate(() => {
           const fourthDiv = document.querySelector(
             ".TimeLeft__C-time div:nth-child(4)"
