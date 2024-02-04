@@ -113,7 +113,7 @@ let resultx;
         console.log("Balance:", innerText);
 
 
-        if (ammount < 64){
+        if (ammount < 32){
         const result = await page.evaluate(() => {
           const fourthDiv = document.querySelector(
             ".TimeLeft__C-time div:nth-child(4)"
@@ -230,6 +230,8 @@ let resultx;
           }, 3000);
           
         }
+      }else{
+        ammount = 1;
       }
       }, 1000);
   }, 5000);
